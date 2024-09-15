@@ -33,10 +33,10 @@ let user = global.db.data.users[who]
 let pushname = m.pushName || 'Sin nombre'
 
 //creador y otros
-global.creador = 'Wa.me/573012482597'
+global.creador = 'Wa.me/5219812796095'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'https://wa.me/message/O4QPPHZOFDOJI1'
-global.namechannel = '© ᥡᥲᥱm᥆rіᑲ᥆𝗍 - ᥴһᥲᥒᥒᥱᥣ 🌱'
+global.asistencia = 'https://wa.me/message/FA22GF35BE5ZP1'
+global.namechannel = '【 ✯ Starlights Team - Oficial Channel ✰ 】'
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
@@ -57,24 +57,25 @@ global.waittt = '🚀 Cargando...'
 global.waitttt = '🚀 Cargando...'
 
 //Enlaces
-var canal = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'  
-var canal2 = 'https://whatsapp.com/channel/0029Vam7yUg77qVaz3sIAp0z'
-var git = 'https://github.com/Dev-Diego' 
-var youtube = 'https://www.youtube.com/@OfcDiego' 
-var github = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
-var facebook = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' 
-var panel = 'https://ctrl.corinplus.com'
-var dash = 'https://dash.corinplus.com'
-var tienda = 'https://dash.corinplus.com/store'
-var status = 'https://status.corinplus.com'
-var discord = 'https://discord.com/invite/T7ksHu7mkz'
-var paypal = 'https://paypal.me/corinplus2024'
-let tiktok = 'https://tiktok.com/@theyaemoribot'
-let correo = 'theyaemoribot@gmail.com'
+var canal = 'https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S'  
+var canal2 = 'https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S'
+var git = 'https://github.com/StarlightsTeam' 
+var youtube = 'https://www.youtube.com' 
+var github = 'https://github.com/StarlightsTeam' 
+var facebook = 'https://www.facebook.com' 
+var panel = 'https://cloud.starlights.uk'
+var dash = 'https://dash.starlights.uk'
+var tienda = 'https://dash.starlights.uk/store'
+var status = 'https://status.starlights.uk'
+var discord = 'https://discord.com'
+var paypal = 'https://paypal.com'
+let tiktok = 'https://tiktok.com'
+let correo = 'undefined@gmail.com'
 
 global.redes = [canal, canal2, git, youtube, github, facebook, panel, dash, tienda, status, discord, paypal, tiktok, correo].getRandom()
 
 global.redeshost = [panel, dash, tienda, status, discord, paypal].getRandom()
+    
 
 //Imagen
 let category = "imagen"
@@ -101,16 +102,16 @@ global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJ
 
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363263466636910@newsletter', newsletterName: '© ᥡᥲᥱm᥆rіᑲ᥆𝗍 - ᥴһᥲᥒᥒᥱᥣ 🌱', serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363263466636910@newsletter', newsletterName: '【 ✯ Starlights Team - Oficial Channel ✰ 】', serverMessageId: -1 }
 }}, { quoted: m }
 
 global.icono = [ 
-'https://qu.ax/EhQB.jpg',
-'https://qu.ax/AdwJ.jpg',
-'https://qu.ax/DYyJ.jpg',
-'https://qu.ax/KGNB.jpg'
+'https://qu.ax/pmQe.jpg',
+'https://qu.ax/rtKo.jpg',
+'https://qu.ax/XEwr.jpg',
+'https://qu.ax/WoJE.jpeg'
 ].getRandom()
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363263466636910@newsletter", serverMessageId: 100, newsletterName: '© ᥡᥲᥱm᥆rіᑲ᥆𝗍 - ᥴһᥲᥒᥒᥱᥣ 🌱', }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363191779210764@newsletter", serverMessageId: 100, newsletterName: '【 ✯ Starlights Team - Oficial Channel ✰ 】', }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
