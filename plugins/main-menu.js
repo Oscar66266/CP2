@@ -4,58 +4,53 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': '𝐈𝐍𝐅𝐎',
-  'buscador': '𝐁𝐔𝐒𝐐𝐔𝐄𝐃𝐀𝐒',
-  'fun': '𝐉𝐔𝐄𝐆𝐎𝐒',
-  'serbot': '𝐒𝐔𝐁 𝐁𝐎𝐓𝐒',
-  'rpg': '𝐑𝐏𝐆',
-  'rg': '𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎',
-  'xp': '𝐄𝐗𝐏',
-  'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
-  'anime': '𝐀𝐍𝐈𝐌𝐄𝐒',
-  'database': '𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄',
-  'fix': '𝐅𝐈𝐗𝐌𝐒𝐆𝐄𝐒𝐏𝐄𝐑𝐀',
-  'grupo': '𝐆𝐑𝐔𝐏𝐎𝐒',
-  'nable': '𝐎𝐍 - 𝐎𝐅𝐅', 
-  'descargas': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
-  'tools': '𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒',
-  'info': '𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎́𝐍',
-  'nsfw': '𝐍𝐒𝐅𝐖', 
-  'owner': '𝐃𝐄𝐒𝐀𝐑𝐑𝐎𝐋𝐋𝐀𝐃𝐎𝐑', 
-  'audio': '𝐀𝐔𝐃𝐈𝐎𝐒', 
-  'ai': '𝐀𝐈',
-  'transformador': '𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑𝐄𝐒',
+  'main': 'Info',
+  'buscador': 'Busquedas',
+  'fun': 'Juegos',
+  'serbot': 'Sub bots',
+  'rpg': 'Rpg',
+  'rg': 'Registro',
+  'xp': 'Exp',
+  'sticker': 'Stickers',
+  'anime': 'Animes',
+  'database': 'Database',
+  'fix': 'Fixmsgespera',
+  'grupo': 'Grupos',
+  'nable': 'On - off', 
+  'descargas': 'Descargas',
+  'tools': 'Herramientas',
+  'info': 'Información',
+  'nsfw': 'Nsfw', 
+  'owner': 'Propietario', 
+  'audio': 'Audios', 
+  'ai': 'Ai',
+  'transformador': 'Convertidores',
 }
 
 const defaultMenu = {
-  before: `© mᥱᥒᥙ ᥆𝖿іᥴіᥲᥣ ძᥱ ᥡᥲᥱm᥆rіᑲ᥆𝗍 ☁️
+  before: `© menu de Yuki ⭐
 
-*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🌸 :･ﾟ✧:･ﾟ✧･ﾟ✧*
-*. ⋅⊰ꕤ ┆* ⭔ 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎
-*. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
-*. ⋅⊰ꕤ ┆* 🌸 Cliente: \`\`\`%name\`\`\`
-*. ⋅⊰ꕤ ┆* ✨️ Exp: \`\`\`%exp\`\`\`
-*. ⋅⊰ꕤ ┆* 🍪 Galletas: \`\`\`%cookies\`\`\`
-*. ⋅⊰ꕤ ┆* 🛡 Nivel: \`\`\`%level\`\`\`
-*. ⋅⊰ꕤ ┆* 💫 Rango: \`\`\`%role\`\`\`
-*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+*•/• Info usuario •/•*
 
-*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🌸 :･ﾟ✧:･ﾟ✧･ﾟ✧*
-*. ⋅⊰ꕤ ┆* ⭔ 𝐈𝐍𝐅𝐎 𝐃𝐄 𝐋𝐀 𝐁𝐎𝐓
-*. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
-*. ⋅⊰ꕤ ┆* 👑 Creador: ⏤͟͟͞͞Dev-Diego
-*. ⋅⊰ꕤ ┆* 🪴 Modo: \`\`\`Publico\`\`\`
-*. ⋅⊰ꕤ ┆* 📚 Libreria: \`\`\`Baileys\`\`\`
-*. ⋅⊰ꕤ ┆* 🕖 Actividad: \`\`\`%muptime\`\`\`
-*. ⋅⊰ꕤ ┆* 👤 Usuarios: \`\`\`%totalreg\`\`\`
-*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
+🌸 Cliente: \`\`\`%name\`\`\`
+✨️ Exp: \`\`\`%exp\`\`\`
+🍪 Galletas: \`\`\`%cookies\`\`\`
+🛡 Nivel: \`\`\`%level\`\`\`
+💫 Rango: \`\`\`%role\`\`\`
 
+*•/• Info del bot •/•*
+
+👑 Creador: ⏤͟͟͞͞Dev-Diego
+🪴 Modo: \`\`\`Publico\`\`\`
+📚 Libreria: \`\`\`Baileys\`\`\`
+🕖 Actividad: \`\`\`%muptime\`\`\`
+👤 Usuarios: \`\`\`%totalreg\`\`\`
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: '*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ ☁️ :･ﾟ✧:･ﾟ✧･ﾟ✧*\n*. ⋅⊰ꕤ ┆* ⭔ %category\n*. ⋅⊰ꕤ ┆* ・・・・・・・・・・・',
-  body: '*. ⋅⊰ꕤ ┆* %cmd',
-  footer: '*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*\n',
+    header: '*•/• %category •/•*\n',
+  body: '✰ %cmd',
+  footer: '',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -155,13 +150,13 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/WoJE.jpeg')
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/AdwJ.jpg')
 
 await conn.reply(m.chat, '*Próximamente se remitirá el menú.*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: dev, sourceUrl: redeshost, thumbnail: await (await fetch(pp)).buffer() }}})
 
 await m.react('🚀') 
 
-await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterName: '© ᥡᥲᥱm᥆rіᑲ᥆𝗍 - ᥴһᥲᥒᥒᥱᥣ 🌱', newsletterJid: "120363263466636910@newsletter", }, externalAdReply: { title: '© ᥡᥲᥱm᥆rі ᑲ᥆𝗍 - mძ ⚡︎', body: dev, thumbnailUrl: 'https://qu.ax/OlTj.jpg', sourceUrl: redeshost, mediaType: 1, renderLargerThumbnail: true }}}, {quoted: fkontak})
+await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterName: '【 ✯ Starlights Team - Oficial Chanel ✰ 】', newsletterJid: "120363191779210764@newsletter", }, externalAdReply: { title: '© Yuki Bot - MD ⭐', body: dev, thumbnailUrl: 'https://qu.ax/OETO.jpg', sourceUrl: redeshost, mediaType: 1, renderLargerThumbnail: true }}}, {quoted: fkontak})
 
   } catch (e) {
     await m.react(error)
