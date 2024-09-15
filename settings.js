@@ -17,8 +17,8 @@ global.confirmCode = ''
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-   ['573012482597', 'Dev Diego 👑', true],
-   ['573218138672', 'Owner 🍭', true],
+   ['5219812796095', 'Kevs  ⭐', true],
+   ['5491168239750', '@Samush$_ ⭐', true],
    ['5493876432076'],
    ['5351524614']
 ]
@@ -34,18 +34,18 @@ global.prems = []
 global.isBaileysFail = false
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.7'
-global.nameqr = 'Yaemori Bot - MD'
+global.nameqr = 'Yuki Bot - MD'
 global.sessions = 'MiniSession'
 global.jadi = 'MiniJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐀𝐢 𝐘𝐚𝐞𝐦𝐨𝐫𝐢 - 𝐌𝐃 ✰⪜'
-global.botname = '© ᥡᥲᥱm᥆rі ᑲ᥆𝗍 - mძ'
-global.wm = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ᥡᥲᥱm᥆rіᑲ᥆𝗍 ☄︎'
-global.author = 'ᥴrᥱᥲ𝗍ᥱძ ᑲᥡ ძᥱ᥎-ძіᥱg᥆ ᰔᩚ'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ sᥙᥒᥣіgһ𝗍 𝗍ᥱᥲm ⚡︎'
-global.textbot = 'ᥲі ᥡᥲᥱm᥆rі : ᥆𝖿ᥴძіᥱg᥆ 🚩'
+global.packname = '✰ Ai Yuki - MD ✰'
+global.botname = '© Ai Yuki Startlings'
+global.wm = '⭐ Starlights '
+global.author = 'Starlights Team'
+global.dev = '> 🚩 Powered By Starlights Team'
+global.textbot = 'Ai yuki :🚩 Starlights Team'
 global.vs = '2.0.6'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -61,13 +61,13 @@ global.avatar = fs.readFileSync('./media/avatar_contact.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/KRbCRM6Gg65DccduR6QJLp' //YaemoriBot
-global.grupo2 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //YaemoriBot2
-global.grupo3 = 'https://chat.whatsapp.com/Fx0yC76BYzRAmiGxZWb9Ho' //team oficial
-global.grupo4 = 'https://chat.whatsapp.com/Ksd32KH9zFoDmO1PJt44M7' //GataBot & YaemoriBot
-global.grupo5 = 'https://chat.whatsapp.com/Ek8vhsv1jg59SSzd6fHjta' //Curiosity & YaemoriBot
-global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
-global.channel2 = 'https://whatsapp.com/channel/0029Vam7yUg77qVaz3sIAp0z'
+global.grupo = 'https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ' //YaemoriBot
+global.grupo2 = 'https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ' //YaemoriBot2
+global.grupo3 = 'https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ' //team oficial
+global.grupo4 = 'https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ' //GataBot & YaemoriBot
+global.grupo5 = 'https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ' //Curiosity & YaemoriBot
+global.channel = 'https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S'
+global.channel2 = 'https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S'
 global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
 global.yt = 'https://www.youtube.com/@OfcDiego'
 global.tiktok = 'https://tiktok.com/@theyaemoribot'
@@ -75,7 +75,7 @@ global.correo = 'theyaemoribot@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '❀ sᥙ́⍴ᥱr ᥕһᥲ𝗍sᥲ⍴⍴ ᑲ᥆𝗍 ☄︎', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Ai Yuki ⭐', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -98,3 +98,4 @@ watchFile(file, () => {
   console.log(chalk.redBright("Update 'settings.js'"))
   import(`${file}?update=${Date.now()}`)
 })
+
