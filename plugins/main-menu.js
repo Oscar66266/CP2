@@ -167,7 +167,7 @@ await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999,
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help', 'menú', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
-handler.register = true
+handler.register = false
 
 export default handler
 
