@@ -1,4 +1,4 @@
-let handler = async (m, { conn, command, usedPrefix }) => {
+/*let handler = async (m, { conn, command, usedPrefix }) => {
 let txt = `*¿Tu Nokia es muy lento y necesitas que tu bot esté activo 24/7?* 📱⏳
 
 ¡Tenemos la solución perfecta para ti! 🎉 Mantén tu bot funcionando sin interrupciones con nuestros servidores, Ofrecemos servidores gratuitos y de pago a precios súper accesibles, al alcance de todos. 💸 
@@ -52,4 +52,4 @@ sourceUrl: redeshost}}},
 handler.tags = ['main'] 
 handler.help = ['host', 'hosting'] 
 handler.command = ['host', 'corin', 'corinplus', 'hosting']
-export default handler
+export default handler*/
