@@ -36,14 +36,14 @@ const handler = async (m, { conn }) => {
     const message = `✅️ *ESTADO DEL SISTEMA*
 
 🚩 *Host ⪼* ${hostname}
-🏆 *Plataforma ⪼* ${platform}
+🖥️ *Plataforma ⪼* ${platform}
 💫 *Arquitectura ⪼* ${arch}
-🥷 *RAM Total ⪼* ${formatBytes(totalMem)}
-🚀 *RAM Libre ⪼* ${formatBytes(freeMem)}
-⌛️ *RAM Usada ⪼* ${formatBytes(usedMem)}
-🕒 *Tiempo Activo ⪼* ${muptime}
+💯 *RAM Total ⪼* ${formatBytes(totalMem)}
+✅ *RAM Libre ⪼* ${formatBytes(freeMem)}
+💾 *RAM Usada ⪼* ${formatBytes(usedMem)}
+🕒 *Tiempo Activa ⪼* ${muptime}
 
-🪴 *Uso de Memoria Nodejs:* 
+🚩 *Uso de Memoria Nodejs:* 
 → RSS: ${formatBytes(nodeUsage.rss)}
 → Heap Total: ${formatBytes(nodeUsage.heapTotal)}
 → Heap Usado: ${formatBytes(nodeUsage.heapUsed)}
@@ -64,7 +64,7 @@ ${diskSpace ? `
 handler.help = ['sistema'];
 handler.tags = ['info'];
 handler.command = ['system', 'sistema'];
-handler.register = true;
+handler.register = false;
 
 export default handler;
 
