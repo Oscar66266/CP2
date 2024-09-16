@@ -18,8 +18,8 @@ global.confirmCode = ''
 
 global.owner = [
    ['5219812796095', 'Kevs  ⭐', true],
-   ['5491168239750', '@Samush$_ ⭐', true],
-   ['5493876432076'],
+   ['5213142183828', 'Akutawa ⭐', true],
+   ['51910108980', '@Samush$_ ⭐', false],
    ['5351524614']
 ]
 
