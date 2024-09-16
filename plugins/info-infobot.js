@@ -44,23 +44,22 @@ let totalreg = Object.keys(global.db.data.users).length
   let old = performance.now()
   let neww = performance.now()
   let speed = neww - old
-  let infobt = `🍭 *I N F O - Y A E M O R I*
+  let infobt = `💞 *I N F O - YUKI*
   
-*_ESTADO_*
-🐢͜͡ޮ ⋄ Chats de grupo: *${groupsIn.length}*
-🌺͜͡ޮ ⋄ Grupos unidos: *${groupsIn.length}*
-🐢͜͡ޮ ⋄ Grupos abandonados: *${groupsIn.length - groupsIn.length}*
-🌺͜͡ޮ ⋄ Chats privados: *${chats.length - groupsIn.length}*
-🐢͜͡ޮ ⋄ Total Chats: *${chats.length}*
-🌺͜͡ޮ ⋄ Registrados: *${totalreg}*
-🐢͜͡ޮ ⋄ Tiempo Activo: *${uptime}*
-
+*_𝙀𝙨𝙩𝙖𝙙𝙤_*
+💞  Chats de grupo: *${groupsIn.length}*
+💞  Grupos unidos: *${groupsIn.length}*
+💞  Grupos abandonados: *${groupsIn.length - groupsIn.length}*
+💞  Chats privados: *${chats.length - groupsIn.length}*
+💞  Total Chats: *${chats.length}*
+💞  Registrados: *${totalreg}*
+💞  Tiempo Activa: *${uptime}*
 
 
 🚩 *NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
-const prep = generateWAMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": 2022, "message": infobt, "orderTitle": wm, "footerText": "Yaemori Bot - MD", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": imagen1, "surface": "CATALOG" } }, { quoted: fkontak })
+const prep = generateWAMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": -9999, "message": infobt, "orderTitle": wm, "footerText": "✰Ai - Yuki✰", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": imagen1, "surface": "CATALOG" } }, { quoted: fkontak })
 await conn.relayMessage(m.chat, prep.message,  { messageId: prep.key.id })
 
 }
