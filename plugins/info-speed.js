@@ -24,17 +24,17 @@ let texto = `🚩 *${global.botname}*
 🚀 *Velocidad:*
 → ${latensi.toFixed(4)}
 
-🕒 *Activo Durante:*
+🕒 *Activa Durante:*
 → ${muptime}
 
 💫 *Chats:*
 → ${chats.length} *Chats privados*
 → ${groups.length} *Grupos*
 
-🏆 *Servidor:*
+🖥️ *Servidor:*
 ➤ *Ram ⪼* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
 
-m.react('✈️')
+m.react('⭐')
 
 conn.reply(m.chat, texto, m, rcanal, )
 // await conn.sendFile(m.chat, icons, 'yaemori.jpg', texto, fkontak, false, { contextInfo: {externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: packname, body: wm, previewType: 0, thumbnail: icons, sourceUrl: redes }}})
