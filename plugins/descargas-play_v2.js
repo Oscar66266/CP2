@@ -1,7 +1,6 @@
 
 import fetch from 'node-fetch';
-import { prepareWAMessageMedia, generateWAMessageFromContent, getDevice } from  
-"@whiskeysockets/baileys";
+const { prepareWAMessageMedia, generateWAMessageFromContent, getDevice } = await import('@whiskeysockets/baileys');
 
 let data;
 let buff;
