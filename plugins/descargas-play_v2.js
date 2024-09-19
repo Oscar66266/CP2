@@ -1,23 +1,19 @@
-
 import fetch from 'node-fetch';
 const { prepareWAMessageMedia, generateWAMessageFromContent, getDevice } = await import('@whiskeysockets/baileys');
-
 let data;
 let buff;
 let mimeType;
 let fileName;
-let apiUrl;
 let apiUrl2;
 let apiUrlsz;
 let device;
-let dataMessage;
 let enviando = false;
 const handler = async (m, { command, usedPrefix, conn, text }) => {
   const datas = global;
   const idioma = datas.db.data.users[m.sender].language || global.defaultLenguaje;
   const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`));
   const tradutor = _translate.plugins.descargas_play_v2;
-  device = await getDevice(m.key.id);
+  device = getDevice(m.key.id);
 
   if (!text) throw `${tradutor.texto1[0]} _${usedPrefix + command} ${tradutor.texto1[1]} _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeS9fJvS_OkDk7p_`;
   if (command === 'playyt' && (device == 'desktop' || device == 'web')) throw `*[❗] Los mensajes de botones aun no estan disponibles en WhatsApp web, acceda a su celular para poder ver y usar los mensajes con botones.*`;
