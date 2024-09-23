@@ -1,4 +1,4 @@
-// By: @DanixlJs
+/*
 
 export async function before(m) {
   if (!m.text || !global.prefix.test(m.text)) {
@@ -30,4 +30,4 @@ export async function before(m) {
    const comando = m.text.trim().split(' ')[0];
    await m.reply(`⚡︎ El comando "${comando}" no es válido.\nUsa "#help" para ver los comandos disponibles.`);
   }
-}
+}*/
