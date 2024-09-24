@@ -40,8 +40,8 @@ const defaultMenu = {
 
 *•/• Info del bot •/•*
 
-👑 Creador: ⏤͟͟͞͞Dev-Diego
-🪴 Modo: \`\`\`Publico\`\`\`
+🚩 Creador: ⏤͟͟͞͞Kev's 
+💬 Modo: \`\`\`Publico\`\`\`
 📚 Libreria: \`\`\`Baileys\`\`\`
 🕖 Actividad: \`\`\`%muptime\`\`\`
 👤 Usuarios: \`\`\`%totalreg\`\`\`
@@ -152,7 +152,7 @@ const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ?
 
 const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/SFCo.jpg')
 
-await conn.reply(m.chat, '*Próximamente se remitirá el menú.*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: dev, sourceUrl: redeshost, thumbnail: await (await fetch(pp)).buffer() }}})
+await conn.reply(m.chat, '*Enviando el Menu unase al grupo https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ .*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: dev, sourceUrl: redeshost, thumbnail: await (await fetch(pp)).buffer() }}})
 
 await m.react('🚀') 
 
