@@ -37,7 +37,7 @@ thumbnail: img,
 sourceUrl: `${yt_play[0].url}`,
 mediaType: 1,
 renderLargerThumbnail: true
-}}}, { quoted: fkontak})
+}}}, { quoted: m})
 await m.react(done)
 } catch {
 await m.react(error)
@@ -46,7 +46,7 @@ await m.reply(`✘ Ocurrío un error`)}}
 handler.help = ['play', 'play2']
 handler.tags = ['descargas']
 handler.command = ['play', 'play2']
-handler.register = true
+handler.register = false
 export default handler
 
 async function search(query, options = {}) {
