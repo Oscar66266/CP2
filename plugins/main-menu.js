@@ -154,9 +154,9 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/
 
 await conn.reply(m.chat, '*Enviando el Menu unase al grupo https://chat.whatsapp.com/Jy4T8vcggeDFqLaIC1nMWZ .*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: dev, sourceUrl: redeshost, thumbnail: await (await fetch(pp)).buffer() }}})
 
-await m.react('🚀') 
+await m.react('💞') 
 
-await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterName: '【 ✯ Starlights Team - Oficial Chanel ✰ 】', newsletterJid: "120363191779210764@newsletter", }, externalAdReply: { title: '© Yuki Bot - MD ⭐', body: dev, thumbnailUrl: 'https://qu.ax/OETO.jpg', sourceUrl: redeshost, mediaType: 1, renderLargerThumbnail: true }}}, {quoted: fkontak})
+await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterName: '【 ✯ Starlights Team - Oficial Chanel ✰ 】', newsletterJid: "120363191779210764@newsletter", }, externalAdReply: { title: '© Yuki Bot - MD ⭐', body: dev, thumbnailUrl: 'https://qu.ax/OETO.jpg', sourceUrl: redeshost, mediaType: 1, renderLargerThumbnail: true }}}, {quoted: m})
 
   } catch (e) {
     await m.react(error)
