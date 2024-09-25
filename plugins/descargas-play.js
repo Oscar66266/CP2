@@ -4,12 +4,12 @@ import yts from "yt-search"
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 if (!text) return conn.reply(m.chat, `🚩 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Distancia - Kimberly Contreraxx`,  m, rcanal, )
 
-conn.reply(m.chat, global.wait, m, {
+/*conn.reply(m.chat, global.wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: dev,
 previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
+sourceUrl: channel }}})*/
 
 try {
 await m.react(rwait)
