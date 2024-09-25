@@ -17,13 +17,13 @@ let { title, dl_url, size } = yt
 
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `🚩 El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal) 
 
-conn.reply(m.chat, `🚀 Descargando El Video...`, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
+/*conn.reply(m.chat, `💬 Estoy descargando su video...`, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, isForwarded: true,                               
 title: packname,
 body: dev,
 previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
-await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: `🚩 *Aquí está tu video de Youtube*\n${dev}`, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: fkontak })
+sourceUrl: channel }}})*/
+await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: `🚩 *Aquí está tu video de Youtube*\n${dev}`, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react(done)
 } catch {
 try {
@@ -32,7 +32,7 @@ let { title, size, dl_url } = yt
 
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `🚩 El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal) 
 
-await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: `🚩 *Aquí está tu video de Youtube*\n${wm}`, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: fkontak })
+await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: `🚩 *Aquí está tu video de Youtube*\n${wm}`, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react(done)
 } catch {
 await m.react(error)
@@ -42,5 +42,5 @@ handler.help = ['video']
 handler.tags = ['descargas']
 handler.customPrefix = /^(1|Video|video)/
 handler.command = new RegExp
-handler.register = true
+handler.register = false
 export default handler
