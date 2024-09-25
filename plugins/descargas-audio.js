@@ -17,14 +17,14 @@ let { title, dl_url, size } = yt
 
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `🚩 El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal) 
 
-conn.reply(m.chat, `🚀 Descargando El Audio...`, m, {
+/*conn.reply(m.chat, `🚀 Descargando El Audio...`, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: dev,
 previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
+sourceUrl: channel }}})*/
 
-await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: fkontak })
+await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 await m.react(done)
 } catch {
 try {
@@ -33,7 +33,7 @@ let { title, size, dl_url } = yt
 
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `🚩 El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal) 
 
-await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: fkontak })
+await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 await m.react(done)
 } catch {
 await m.react(error)
@@ -43,5 +43,5 @@ handler.help = ['audio']
 handler.tags = ['descargas']
 handler.customPrefix = /^(2|audio|Audio)/
 handler.command = new RegExp
-handler.register = true
+handler.register = false
 export default handler
