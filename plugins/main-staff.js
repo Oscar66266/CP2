@@ -1,67 +1,55 @@
-let handler = async (m, { conn, command, usedPrefix }) => {
-let staff = `🌹 *EQUIPO DE AYUDANTES*
-🌱 *Bot:* ${botname}
-🍟 *Versión:* ${vs}
-🪴 *Libreria:* ${libreria + baileys}
+import fetch from 'node-fetch';
+import Starlights from '@StarlightsTeam/Scraper';
+import { getDevice } from '@whiskeysockets/baileys';
 
-👑 *Propietario:*
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+if (!text) return conn.reply(m.chat, 'ingresa el texto de lo que quieras buscar', m);
 
-• DevDiego
-🌱 *Rol:* Propietario
-🌴 *Número:* ${creador}
-🚩 *GitHub:* https://github.com/Dev-Diego
+await m.react('🕓');
+    
+const deviceType = await getDevice(m.key.id);
+if (deviceType !== 'desktop' && deviceType !== "web") {
+try {
+let results = await Starlights.spotifySearch(text);
+if (!results || results.length === 0) return conn.reply(m.chat, 'No se encontraron resultados', m);
 
-🪴  *Colaboradores:*
-
-• ArizzVal
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/5215610314499
-🚩 *GitHub:* https://github.com/ArizzVal
-
-• elrebelde21
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/573147616444
-🚩 *GitHub:* https://github.com/elrebelde21
-
-• AzamiJs
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/5214434703586
-🚩 *GitHub:* https://github.com/AzamiJs
-
-• Eder
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/573027866596
-🚩 *GitHub:* https://github.com/WOTCHITO
-
-• David Chian 
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/5351524614
-🚩 *GitHub:* https://github.com/David-Chian
-
-• SheZiR
-🌱 *Rol:* Developer
-🌴 *Número:* Wa.me/573106909511
-🚩 *GitHub:* https://github.com/SheZiR`
-await conn.sendFile(m.chat, icons, 'yaemori.jpg', staff.trim(), fkontak, true, {
-contextInfo: {
-'forwardingScore': 200,
-'isForwarded': false,
-externalAdReply: {
-showAdAttribution: true,
-renderLargerThumbnail: false,
-title: `🥷 Developers 👑`,
-body: `🚩 Staff Oficial`,
-mediaType: 1,
-sourceUrl: redes,
-thumbnailUrl: icono
-}}
-}, { mentions: m.sender })
-await m.react(emoji)
-
+let listSections = [];
+let txt = 'Spotify  -  Search';
+for (let i = 0; i < (results.length >= 10 ? 10 : results.length); i++) {
+const track = results[i];
+      
+listSections.push(
+{title: '',rows: [
+{header: '',title: `${track.title}\n`,description: `Artista: ${track.artist}`,id: `${usedPrefix}spotifydl ${track.url}`},
+]});
 }
-handler.help = ['staff']
-handler.command = ['colaboradores', 'staff']
-handler.register = true
-handler.tags = ['main']
 
-export default handler
+await conn.sendList(m.chat, '*乂  Y U K I  -  S E A R C H 💞*', '> 🚩 Powered By Starlights Team', 'Resultados', results[0].thumbnail, listSections, m);
+await m.react('✅');
+} catch (error) {
+console.error(error);
+await m.react('✖️');
+}
+} else {
+try {
+let res = await Starlights.spotifySearch(text)
+let img = await (await fetch(`${res[0].thumbnail}`)).buffer()
+let txt = 'Spotify  -  Search'
+for (let i = 0; i < res.length; i++) {
+txt += `\n\n`
+txt += `  *» Nro* : ${i + 1}\n`
+txt += `  *» Titulo* : ${res[i].title}\n`
+txt += `  *» Artista* : ${res[i].artist}\n`
+txt += `  *» Url* : ${res[i].url}`
+}
+    
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
+await m.react('✅')
+} catch {
+await m.react('✖️')
+}
+}}
+
+handler.command = ['spotifysearch'];
+
+export default handler;
